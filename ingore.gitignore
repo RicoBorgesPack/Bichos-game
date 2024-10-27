@@ -1,0 +1,16 @@
+# Ignore arquivos de dependências e build
+node_modules/
+*.pyc
+__pycache__/
+*.log
+*.sqlite3
+*.db
+
+# Ignore ambientes virtuais do Python
+venv/
+.env
+env/
+
+# Ignore pastas de compilação do Next.js
+.next/
+out/
