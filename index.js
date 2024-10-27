@@ -1,9 +1,9 @@
-// pages/index.js
+
 import React, { useState } from 'react';
 import axios from 'axios';
-import styles from '../styles/Home.module.css'; // Importando o CSS
+import styles from 'Home.module.css';
 
-// Mapeamento dos números dos animais para emojis
+
 const animalEmojis = {
   1: '🦤', 
   2: '🦅', 
@@ -43,7 +43,6 @@ export default function Home() {
   const [vencedores, setVencedores] = useState([]);
   const [saldo, setSaldo] = useState(null);
 
-  // Função para registrar uma aposta
   const registrarAposta = async () => {
     try {
       const response = await axios.post("http://localhost:5000/aposta", {
@@ -59,7 +58,6 @@ export default function Home() {
     }
   };
 
-  // Função para simular o pagamento do invoice
   const confirmarPagamento = async () => {
     if (!invoice) return;
     try {
@@ -73,7 +71,6 @@ export default function Home() {
     }
   };
 
-  // Função para realizar o sorteio e exibir vencedores
   const realizarSorteio = async () => {
     try {
       const response = await axios.post("http://localhost:5000/sorteio");
@@ -85,7 +82,6 @@ export default function Home() {
     }
   };
 
-  // Função para verificar o saldo do usuário
   const verificarSaldo = async () => {
     try {
       const response = await axios.get(`http://localhost:5000/saldo/${usuario}`);
