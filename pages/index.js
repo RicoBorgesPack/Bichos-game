@@ -1,7 +1,7 @@
 // pages/index.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import styles from '../styles/Home.module.css'; // Importando o CSS
+import styles from '../styles/home.module.css'; // Importando o CSS
 
 // Mapeamento dos números dos animais para emojis
 const animalEmojis = {
